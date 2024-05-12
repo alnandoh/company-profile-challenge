@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  padding:0;
+  margin:0;
+}
+
+@layer base{
+  body{
+    @apply px-4 bg-dark-800 text-primary-300 flex flex-col justify-center gap-[10px] md:overflow-auto;
+  }
+  section{
+    @apply p-[10px] border-dark-700 border-2 rounded-xl gap-[10px]
+  }
+  h2{
+    @apply uppercase font-semibold text-[24px] text-primary-300
+  }
+  h3{
+    @apply uppercase font-medium text-lg text-primary-300
+  }
+  hr{
+    @apply border-dark-500
+  }
+}
+
+@layer components{
+  .header-nav-item{
+    @apply font-medium leading-[150%] text-shade-700 px-2.5 py-1.5 lg:px-5 lg:py-3.5 bg-dark-800 rounded-xl active:text-primary-600
+  }
+}
+
