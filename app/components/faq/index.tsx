@@ -1,6 +1,34 @@
-import Button from "@/components/Button";
+import Accordion from "@/components/Accordion";
 import Card from "@/components/Card";
-import CircleButton from "@/components/CircleButton";
+import Form from "@/components/Form";
+
+const faqs = [
+  {
+    question: "How long does it take to complete a web development project?",
+    answer:
+      "The timeline varies depending on project's complexity & requirements. Our team strives to deliver projects on time while maintaining the highest quality standards.",
+  },
+  {
+    question: "Can you handle large-scale mobile app development project?",
+    answer:
+      "Yes, we have extensive experience in handling large-scale mobile app development projects. Our team is equipped with the necessary skills and resources to deliver high-quality mobile apps that meet your requirements and scale as your business grows.",
+  },
+  {
+    question: "Can you integrate third-party APIs into our mobile app?",
+    answer:
+      "Absolutely! We specialize in integrating third-party APIs into mobile apps to enhance functionality and provide seamless user experiences. Whether it's payment gateways, social media integrations, or other APIs, we can handle it.",
+  },
+  {
+    question: "How do you ensure cross-platform compatibility for mobile app?",
+    answer:
+      "We utilize industry-leading frameworks and technologies to ensure cross-platform compatibility for mobile apps. By using frameworks like React Native and Flutter, we can develop apps that work seamlessly across iOS and Android devices, saving time and resources.",
+  },
+  {
+    question: "What is your approach to user experience (UX) design?",
+    answer:
+      "Our approach to UX design is user-centric and data-driven. We conduct thorough research to understand your target audience and their needs, which informs our design decisions. We focus on creating intuitive interfaces and smooth user flows to enhance the overall user experience.",
+  },
+];
 
 export default function Faq() {
   return (
@@ -8,108 +36,18 @@ export default function Faq() {
       <Card>
         <h2>Frequently Asked Questions</h2>
       </Card>
-      <Card>
-        <div className="flex justify-between items-center gap-5">
-          <p className="text-lg font-medium">
-            How long does it take to complete a web development project?
-          </p>
-          <CircleButton />
+      <div className="grid items gap-y-2.5 lg:grid-cols-5 lg:gap-2.5">
+        <div className="flex flex-col lg:col-span-3 gap-2.5">
+          {faqs.map((faq, index) => (
+            <Card key={index}>
+              <Accordion title={faq.question} content={faq.answer} />
+            </Card>
+          ))}
         </div>
-        <hr />
-        <p className="text-sm text-shade-600">
-          The timeline varies depending on the project&apos;s complexity and
-          requirements. Our team strives to deliver projects on time while
-          maintaining the highest quality standards.
-        </p>
-      </Card>
-      <Card>
-        <div className="flex justify-between items-center gap-5">
-          <p className="text-lg font-medium">
-            How long does it take to complete a web development project?
-          </p>
-          <CircleButton />
-        </div>
-        <hr />
-        <p className="text-sm text-shade-600">
-          The timeline varies depending on the project&apos;s complexity and
-          requirements. Our team strives to deliver projects on time while
-          maintaining the highest quality standards.
-        </p>
-      </Card>
-      <Card>
-        <div className="flex justify-between items-center gap-5">
-          <p className="text-lg font-medium">
-            How long does it take to complete a web development project?
-          </p>
-          <CircleButton />
-        </div>
-        <hr />
-        <p className="text-sm text-shade-600">
-          The timeline varies depending on the project&apos;s complexity and
-          requirements. Our team strives to deliver projects on time while
-          maintaining the highest quality standards.
-        </p>
-      </Card>
-      <Card>
-        <div className="flex justify-between items-center gap-5">
-          <p className="text-lg font-medium">
-            How long does it take to complete a web development project?
-          </p>
-          <CircleButton />
-        </div>
-        <hr />
-        <p className="text-sm text-shade-600">
-          The timeline varies depending on the project&apos;s complexity and
-          requirements. Our team strives to deliver projects on time while
-          maintaining the highest quality standards.
-        </p>
-      </Card>
-      <Card>
-        <div className="flex justify-between items-center gap-5">
-          <p className="text-lg font-medium">
-            How long does it take to complete a web development project?
-          </p>
-          <CircleButton />
-        </div>
-        <hr />
-        <p className="text-sm text-shade-600">
-          The timeline varies depending on the project&apos;s complexity and
-          requirements. Our team strives to deliver projects on time while
-          maintaining the highest quality standards.
-        </p>
-      </Card>
-      <Card>
-        <form className="flex flex-col gap-5">
-          <h3>Ask Your questions</h3>
-          <hr />
-          <div className="flex flex-col gap-[10px]">
-            <div>
-              <p className="font-medium leading-6 mb-2">NAME</p>
-              <input
-                type="text"
-                placeholder="Enter your name"
-                className="p-4 bg-dark-800 text-shade-800 w-full rounded-lg"
-              ></input>
-            </div>
-            <div>
-              <p className="font-medium leading-6 mb-2">EMAIL</p>
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="p-4 bg-dark-800 text-shade-800 w-full rounded-lg"
-              ></input>
-            </div>
-            <div>
-              <p className="font-medium leading-6 mb-2">YOUR QUESTIONS</p>
-              <textarea
-                placeholder="Enter your question here..."
-                className="p-4 bg-dark-800 text-shade-800 w-full rounded-lg"
-              ></textarea>
-            </div>
-          </div>
-          <Button text="Send your message" />
-        </form>
-      </Card>
+        <Card className="col-span-2">
+          <Form />
+        </Card>
+      </div>
     </section>
   );
 }

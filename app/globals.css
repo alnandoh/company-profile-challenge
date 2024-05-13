@@ -9,7 +9,7 @@
 
 @layer base{
   body{
-    @apply px-4 bg-dark-800 text-primary-300 flex flex-col justify-center gap-[10px] md:overflow-auto;
+    @apply px-4 bg-dark-800 text-primary-300 flex flex-col justify-center gap-[10px] md:overflow-auto lg:px-10 lg:gap-20 text-lg;
   }
   section{
     @apply p-[10px] border-dark-700 border-2 rounded-xl gap-[10px]
@@ -26,8 +26,16 @@
 }
 
 @layer components{
-  .header-nav-item{
-    @apply font-medium leading-[150%] text-shade-700 px-2.5 py-1.5 lg:px-5 lg:py-3.5 bg-dark-800 rounded-xl active:text-primary-600
-  }
+  
 }
 
+.loading {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	background:
+		radial-gradient(farthest-side, #D48e77 94%, #0000) top/16px 16px no-repeat,
+		conic-gradient(#0000 30%, #CE7D63);
+	-webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - 16px), #000 0);
+	animation: s3 0.5s infinite linear;
+}

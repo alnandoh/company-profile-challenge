@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import ProgressBar from "@/components/ProgressBar";
 import ScrollToTop from "@/components/ScrollToTop";
 import CTAButton from "@/components/CTAButton";
+import BgParticles from "@/components/BgParticles";
 
 const roboto_mono = Roboto_Mono({ subsets: ["latin"] });
 const roboto_flex = Roboto_Flex({ subsets: ["latin"] });
@@ -25,6 +26,7 @@ export default function RootLayout({
       <body className={roboto_flex.className}>
         <ProgressBar />
         <Navbar />
+        {/* <BgParticles /> */}
         {children}
         <Footer />
         <ScrollToTop />

@@ -3,8 +3,6 @@ import Image from "next/image";
 import UpRightArrow from "@/public/uprightarrow.svg";
 import RightArrow from "@/public/RightArrowColor.svg";
 import DownArrow from "@/public/DownArrow.svg";
-import Plus from "@/public/plus.svg";
-import Minus from "@/public/minus.svg";
 import { useEffect, useState } from "react";
 
 interface CircleButtonProps {
@@ -22,12 +20,6 @@ export default function CircleButton({ image, text }: CircleButtonProps) {
       case "DownArrow":
         setImgSrc(DownArrow);
         break;
-      case "Plus":
-        setImgSrc(Plus);
-        break;
-      case "Minus":
-        setImgSrc(Minus);
-        break;
       default:
         setImgSrc(UpRightArrow);
     }
@@ -42,25 +34,21 @@ export default function CircleButton({ image, text }: CircleButtonProps) {
               alt={`${image} Icon`}
               className={`absolute top-0 bottom-0 left-0 right-0 m-auto items-center transition ${
                 image === "DownArrow"
-                  ? "group-hover/circle:translate-y-1"
+                  ? "scale-125 group-hover/circle:translate-y-1"
                   : "group-hover/circle:translate-x-1 group-hover/circle:-translate-y-1"
               }`}
             />
           </div>
-          <p className="font-medium uppercase">{text}</p>
+          <p className="font-medium uppercase transition group-hover/circle:text-primary-800 group-hover/circle:[text-shadow:_1px_1px_3px_rgb(255_255_255_/_60%)]">
+            {text}
+          </p>
         </button>
       ) : (
         <button className="relative min-w-12 w-12 h-12 flex rounded-full bg-dark-800 border-dark-500 border ease-in-out duration-200 group/circle">
           <Image
             src={imgSrc}
             alt={`${image} Icon`}
-            className={`absolute top-0 bottom-0 left-0 right-0 m-auto items-center transition ${
-              image === "Plus"
-                ? ""
-                : image === "Minus"
-                ? ""
-                : "group-hover/circle:translate-x-1 group-hover/circle:-translate-y-1"
-            }`}
+            className={`absolute top-0 bottom-0 left-0 right-0 m-auto items-center transition "group-hover/circle:translate-x-1 group-hover/circle:-translate-y-1"`}
           />
         </button>
       )}
