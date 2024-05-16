@@ -45,7 +45,7 @@ export default function Navbar() {
       <div
         className={`${
           isOpen ? "block" : "hidden"
-        } lg:block flex flex-col md:flex-row md:gap-4`}
+        } flex md:flex flex-col md:flex-row md:gap-4`}
       >
         {navItems.map((item, index) => (
           <Link

@@ -47,7 +47,7 @@ const ServicesSection = () => {
       <Card>
         <h2>Our Services</h2>
       </Card>
-      <div className="grid gap-y-2.5 lg:grid-cols-2 lg:gap-2.5">
+      <div className="grid gap-y-2.5 md:grid-cols-2 2xl:grid-cols-4 gap-2.5">
         {services.map((service, index) => (
           <Card key={index}>
             <div className="flex flex-row gap-4 items-center">
@@ -61,9 +61,11 @@ const ServicesSection = () => {
               <p className="font-medium text-lg leading-[150%] mb-1">
                 Starts From {service.startingPrice}
               </p>
-              <p className="leading-[150%] text-sm">{service.description}</p>
+              <p className="leading-[150%] text-sm text-shade-500">
+                {service.description}
+              </p>
             </div>
-            <Button text="Book a call" />
+            <Button text="Book a call" href="#" />
           </Card>
         ))}
       </div>

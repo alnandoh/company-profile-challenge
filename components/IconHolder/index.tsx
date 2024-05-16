@@ -14,7 +14,7 @@ export default function IconHolder({
   return (
     <>
       {text ? (
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 md:gap-4">
           <div className="bg-dark-600 min-w-12 w-12 h-12 flex items-center justify-center rounded-[10px] border border-dark-400">
             <Image src={imageUrl} alt={`${altText}`} />
           </div>

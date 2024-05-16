@@ -11,7 +11,7 @@ interface CardProps {
 export default function Card({ className, children }: CardProps) {
   const { ref, inView } = useInView({
     triggerOnce: true,
-    threshold: 0.2,
+    threshold: 0.3,
   });
 
   return (
@@ -20,9 +20,10 @@ export default function Card({ className, children }: CardProps) {
       animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 50 }}
       transition={{ duration: 0.5, type: "spring", stiffness: 100 }}
       whileHover={{ scale: 1.015 }}
-      className={`${className} p-6 bg-dark-700 rounded-xl flex flex-col gap-5`}
+      className={`${className} p-6 bg-dark-700 rounded-xl flex flex-col gap-5 md:p-14 relative`}
       ref={ref}
     >
+      <div className="absolute inset-0 rounded-xl shadow-sm shadow-primary-600/30 -z-[1]"></div>
       {children}
     </motion.div>
   );

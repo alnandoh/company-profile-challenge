@@ -47,7 +47,7 @@ export default function TestimonialsComp() {
       <Card>
         <h2>Testimonials</h2>
       </Card>
-      <div className="grid gap-y-2.5 lg:grid-cols-4 lg:gap-2.5 ">
+      <div className="grid gap-y-2.5 md:grid-cols-2 2xl:grid-cols-4 gap-2.5 ">
         {testimonials.map((testimonial, index) => (
           <Card key={index}>
             <div className="flex flex-col gap-4">
@@ -65,10 +65,6 @@ export default function TestimonialsComp() {
             />
           </Card>
         ))}
-      </div>
-
-      <div className="flex gap-2 py-5 bg-dark-700 items-center justify-center rounded-xl">
-        <CircleButton image="DownArrow" text="All Works" />
       </div>
     </section>
   );

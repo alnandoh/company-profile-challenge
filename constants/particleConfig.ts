@@ -34,7 +34,7 @@ export const particleConfig: ISourceOptions = {
         type: "circle",
       },
       onHover: {
-        enable: false,
+        enable: true,
         mode: [],
         parallax: {
           enable: false,

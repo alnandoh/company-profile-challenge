@@ -9,7 +9,7 @@
 
 @layer base{
   body{
-    @apply px-4 bg-dark-800 text-primary-300 flex flex-col justify-center gap-[10px] md:overflow-auto lg:px-10 lg:gap-20 text-lg;
+    @apply px-4 bg-dark-800 text-primary-300 flex flex-col justify-center gap-2.5 md:overflow-auto md:px-8 md:gap-8 text-lg scroll-smooth;
   }
   section{
     @apply p-[10px] border-dark-700 border-2 rounded-xl gap-[10px]
@@ -25,9 +25,6 @@
   }
 }
 
-@layer components{
-  
-}
 
 .loading {
 	width: 100px;

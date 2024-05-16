@@ -1,5 +1,5 @@
-import CircleButton from "@/components/CircleButton";
 import Card from "@/components/Card";
+import Button from "@/components/Button";
 
 const aboutData = [
   {
@@ -30,24 +30,21 @@ export default function AboutComp() {
       <Card>
         <h2>Reasons to Choose NexGen for Your Digital Journey</h2>
       </Card>
-      <div className="flex flex-col gap-2.5 lg:flex-row">
+      <div className="grid md:grid-cols-2 2xl:grid-cols-4 gap-2.5">
         {aboutData.map((item, index) => (
           <Card key={index}>
             <div className="flex flex-col gap-2 ">
               <p className="text-xl uppercase font-medium leading-[150%]">
                 {item.title}
               </p>
-              <p className="text-sm leading-[150%] text-shade-600">
+              <p className="text-sm leading-[150%] text-shade-500">
                 {item.content}
               </p>
-            </div>
-            <div className="flex gap-2 items-center leading-[150%] text-shade-600 mt-auto">
-              <CircleButton />
-              Learn More
             </div>
           </Card>
         ))}
       </div>
+      <Button text="Learn More" href="about" />
     </section>
   );
 }

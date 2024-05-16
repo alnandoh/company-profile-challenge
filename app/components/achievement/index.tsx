@@ -14,7 +14,7 @@ const achievementsData = [
 
 export default function Achievement() {
   return (
-    <section className="grid grid-cols-2 lg:grid-cols-5 lg:-mt-[50px]">
+    <div className="p-2.5 border-dark-700 border-2 rounded-xl gap-2.5 grid grid-cols-2 lg:grid-cols-5">
       {achievementsData.map((achievement, index) => (
         <AchievementCard
           key={index}
@@ -23,6 +23,6 @@ export default function Achievement() {
           classname={achievement.classname}
         />
       ))}
-    </section>
+    </div>
   );
 }

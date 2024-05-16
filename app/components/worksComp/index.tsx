@@ -13,7 +13,7 @@ export default function WorksComp() {
       <Card>
         <h2>Our Works</h2>
       </Card>
-      <section className="flex flex-col gap-[10px]">
+      <section className="grid gap-[10px]">
         <Image
           src={Zenith}
           alt="Zenith Image"
@@ -36,7 +36,7 @@ export default function WorksComp() {
               <div className="rounded-full w-1 h-1 bg-primary-800"></div>
               <p className="text-shade-400 text-xs">6 months</p>
             </div>
-            <p className="text-sm text-shade-600">
+            <p className="text-sm text-shade-400">
               An all-in-one health and wellness app that offers personalized
               fitness plans, nutrition guidance
             </p>
@@ -65,7 +65,7 @@ export default function WorksComp() {
               <div className="rounded-full w-1 h-1 bg-primary-800"></div>
               <p className="text-shade-400 text-xs">3 months</p>
             </div>
-            <p className="text-sm text-shade-600">
+            <p className="text-sm text-shade-400">
               A complete overhaul of a corporate website to enhance its brand
               identity and user experience.
             </p>
