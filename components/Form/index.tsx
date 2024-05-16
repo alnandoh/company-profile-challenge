@@ -30,7 +30,7 @@ export default function Form() {
           ></textarea>
         </div>
       </div>
-      <Button text="Send your message" />
+      <Button text="Send your message" href="#" />
     </form>
   );
 }

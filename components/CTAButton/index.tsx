@@ -6,7 +6,7 @@ export default function CTAButton() {
   return (
     <Link
       href="https://wa.me/message/MZ3TNFQEEAV5H1"
-      className="fixed bottom-2 right-1 h-8  w-8 lg:w-16 lg:h-16 lg:right-4 lg:bottom-4 animate-bounce"
+      className="fixed bottom-2 right-1 h-8 w-8 lg:h-10 lg:w-10 xl:w-14 xl:h-14 2xl:right-4 2xl:bottom-4 animate-bounce opacity-90"
       target="_blank"
       rel="noreferrer noopener"
     >

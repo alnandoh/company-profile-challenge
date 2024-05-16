@@ -36,7 +36,7 @@ export default function Faq() {
       <Card>
         <h2>Frequently Asked Questions</h2>
       </Card>
-      <div className="grid items gap-y-2.5 lg:grid-cols-5 lg:gap-2.5">
+      <div className="grid gap-y-2.5 lg:grid-cols-5 lg:gap-2.5">
         <div className="flex flex-col lg:col-span-3 gap-2.5">
           {faqs.map((faq, index) => (
             <Card key={index}>
@@ -44,7 +44,7 @@ export default function Faq() {
             </Card>
           ))}
         </div>
-        <Card className="col-span-2">
+        <Card className="lg:col-span-2">
           <Form />
         </Card>
       </div>
