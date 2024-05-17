@@ -12,14 +12,7 @@ export const particleConfig: ISourceOptions = {
     enable: false,
   },
   detectRetina: true,
-  fpsLimit: 30,
-  infection: {
-    cure: false,
-    delay: 0,
-    enable: false,
-    infections: 0,
-    stages: [],
-  },
+  fpsLimit: 120,
   interactivity: {
     detectsOn: "canvas",
     events: {
@@ -35,7 +28,7 @@ export const particleConfig: ISourceOptions = {
       },
       onHover: {
         enable: true,
-        mode: [],
+        mode: "repulse",
         parallax: {
           enable: false,
           force: 2,
@@ -63,13 +56,13 @@ export const particleConfig: ISourceOptions = {
         },
       },
       push: {
-        quantity: 4,
+        quantity: 90,
       },
       remove: {
         quantity: 2,
       },
       repulse: {
-        distance: 200,
+        distance: 100,
         duration: 0.4,
         speed: 1,
       },
@@ -81,11 +74,11 @@ export const particleConfig: ISourceOptions = {
   },
   particles: {
     collisions: {
-      enable: false,
+      enable: true,
       mode: "bounce",
     },
     color: {
-      value: "#fff",
+      value: "#e68e2e",
       animation: {
         enable: false,
         speed: 1,
@@ -95,12 +88,12 @@ export const particleConfig: ISourceOptions = {
     links: {
       blink: false,
       color: {
-        value: "#fff",
+        value: "#f5d393",
       },
       consent: false,
-      distance: 100,
+      distance: 150,
       enable: true,
-      opacity: 1,
+      opacity: 0.5,
       shadow: {
         blur: 5,
         color: {
@@ -134,9 +127,9 @@ export const particleConfig: ISourceOptions = {
         },
         enable: false,
       },
-      outMode: "out",
+      outMode: "bounce",
       random: false,
-      speed: 2,
+      speed: 1,
       straight: false,
       trail: {
         enable: false,
@@ -150,12 +143,12 @@ export const particleConfig: ISourceOptions = {
     },
     number: {
       density: {
-        enable: false,
+        enable: true,
         area: 800,
         factor: 1000,
       },
       limit: 0,
-      value: 100,
+      value: 75,
     },
     opacity: {
       animation: {
@@ -168,7 +161,7 @@ export const particleConfig: ISourceOptions = {
         enable: false,
         minimumValue: 1,
       },
-      value: 1,
+      value: 0.5,
     },
     rotate: {
       animation: {
@@ -205,10 +198,10 @@ export const particleConfig: ISourceOptions = {
         sync: false,
       },
       random: {
-        enable: false,
+        enable: true,
         minimumValue: 1,
       },
-      value: 3,
+      value: { min: 1, max: 5 },
     },
     stroke: {
       color: {

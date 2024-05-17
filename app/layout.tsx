@@ -26,7 +26,7 @@ export default function RootLayout({
       <body className={roboto_flex.className}>
         <ProgressBar />
         <Navbar />
-        {/* <BgParticles /> */}
+        <BgParticles />
         {children}
         <Footer />
         <ScrollToTop />

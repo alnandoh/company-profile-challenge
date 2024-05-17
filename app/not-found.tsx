@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Page() {
   return (
-    <div className="min-h-screen max-w-xl mx-auto flex justify-center items-center">
+    <div className="fixed top-0 left-0 bg-dark-800 h-screen w-screen mx-auto flex justify-center items-center z-10">
       <div className="flex justify-center items-center gap-4 flex-col">
         <h3 className="text-primary-800 text-4xl font-bold mb-5">NOT FOUND</h3>
         <Link

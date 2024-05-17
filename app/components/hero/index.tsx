@@ -9,7 +9,7 @@ const videoUrl =
 export default function Hero() {
   return (
     <>
-      <section className=" flex flex-col gap-5 md:p-10 lg:p-20 lg:gap-8 relative overflow-hidden">
+      <section className=" flex flex-col gap-5 md:p-10 lg:p-20 lg:gap-8 relative overflow-hidden bg-dark-800">
         <VideoPlayer videoSrc={videoUrl} />
         <h1 className="font-semibold text-3xl md:text-6xl uppercase">
           Digital solutions
