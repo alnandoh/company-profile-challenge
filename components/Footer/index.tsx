@@ -7,6 +7,7 @@ import Twitter from "@/public/Twitter.svg";
 import Dribbble from "@/public/Dribbble.svg";
 import Behance from "@/public/Behance.svg";
 import SocialMedia from "../SocialMedia";
+import InfiniteScroll from "../InfiniteScroll";
 
 export default function Footer() {
   return (
@@ -29,36 +30,14 @@ export default function Footer() {
           href="https://wa.me/message/MZ3TNFQEEAV5H1"
         />
       </section>
-      <div className="bg-dark-700 overflow-x-hidden rounded-lg">
-        <div className=" animate-infiniteScroll">
-          <div className="flex flex-row  whitespace-nowrap gap-2 py-3">
-            <div className="flex items-center gap-2 uppercase text-sm text-shade-800">
-              <div className="w-2 h-2 rounded-full bg-primary-800"></div>FOLLOW
-              US ON SOCIAL MEDIA
-            </div>
-            <div className="flex items-center gap-2 uppercase text-sm text-shade-800">
-              <div className="w-2 h-2 rounded-full bg-primary-800"></div>FOLLOW
-              US ON SOCIAL MEDIA
-            </div>
-            <div className="flex items-center gap-2 uppercase text-sm text-shade-800">
-              <div className="w-2 h-2 rounded-full bg-primary-800"></div>FOLLOW
-              US ON SOCIAL MEDIA
-            </div>
-            <div className="flex items-center gap-2 uppercase text-sm text-shade-800">
-              <div className="w-2 h-2 rounded-full bg-primary-800"></div>FOLLOW
-              US ON SOCIAL MEDIA
-            </div>
-            <div className="flex items-center gap-2 uppercase text-sm text-shade-800">
-              <div className="w-2 h-2 rounded-full bg-primary-800"></div>FOLLOW
-              US ON SOCIAL MEDIA
-            </div>
-            <div className="flex items-center gap-2 uppercase text-sm text-shade-800">
-              <div className="w-2 h-2 rounded-full bg-primary-800"></div>FOLLOW
-              US ON SOCIAL MEDIA
-            </div>
-          </div>
-        </div>
-      </div>
+      <InfiniteScroll
+        contents={[
+          "FOLLOW US ON SOCIAL MEDIA",
+          "FOLLOW US ON SOCIAL MEDIA",
+          "FOLLOW US ON SOCIAL MEDIA",
+          "FOLLOW US ON SOCIAL MEDIA",
+        ]}
+      />
       <div className="grid  gap-2.5">
         <div className="grid grid-cols-4 justify-between gap-[10px]">
           <SocialMedia

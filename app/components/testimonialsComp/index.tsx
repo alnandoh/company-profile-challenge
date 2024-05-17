@@ -32,7 +32,7 @@ const testimonials = [
     image: Reviewer3,
   },
   {
-    title: "NexGen's web design brought our vision!",
+    title: "NexGen's web design is a masterpiece!",
     content:
       "Their responsive design ensures our website looks stunning on all devices, contributing to increased user engagement.",
     name: "Jennifer Lee",
@@ -51,7 +51,7 @@ export default function TestimonialsComp() {
         {testimonials.map((testimonial, index) => (
           <Card key={index}>
             <div className="flex flex-col gap-4">
-              <p className="text-xl uppercase font-medium leading-[150%]">
+              <p className="text-lg uppercase font-medium leading-[150%]">
                 {testimonial.title}
               </p>
               <p className="text-sm leading-[150%] text-shade-600">
