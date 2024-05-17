@@ -22,9 +22,9 @@ export default function HeroButton({ classnames }: HeroButtonProps) {
         />
         <div className="absolute -left-2 -bottom-2 border-2 rounded-full border-e-transparent w-14 h-14 border-primary-800 transition group-hover/herobutton:animate-spin-slow"></div>
       </div>
-      <div className="uppercase text-primary-800 font-medium">
+      <p className="uppercase text-primary-800 font-medium z-[1]">
         Start a project
-      </div>
+      </p>
     </Link>
   );
 }

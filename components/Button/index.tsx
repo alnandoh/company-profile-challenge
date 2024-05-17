@@ -15,8 +15,8 @@ export default function Button({ text, bg, arrow, href }: ButtonProps) {
       href={`${href}`}
       className={`${
         bg === "black"
-          ? "bg-dark-800 text-primary-300 hover:bg-dark-800/90"
-          : "bg-primary-800 text-dark-800 hover:bg-primary-800/85"
+          ? "bg-dark-800 text-primary-300 hover:bg-dark-800/85"
+          : "bg-primary-800 text-dark-800 hover:bg-orange-500"
       } rounded-xl w-full text-sm flex gap-3 items-center justify-center py-[14px] uppercase font-medium ease-in-out duration-200 group/button mt-auto`}
     >
       <p className="transition group-hover/button:scale-110">{text}</p>
