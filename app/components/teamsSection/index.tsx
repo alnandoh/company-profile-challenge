@@ -17,9 +17,22 @@ export default function TeamsSection() {
   const [teamMembers, setTeamMembers] = useState<TeamMember[]>([]);
 
   useEffect(() => {
-    fetch("https://reqres.in/api/users?page=1")
-      .then((response) => response.json())
-      .then((data) =>
+    const fetchFunction = async () => {
+      try {
+        const response = await fetch("https://reqres.in/api/users?page=1");
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        const data = await response.json();
+        return data;
+      } catch (error) {
+        console.error("Error fetching data:", error);
+        return null;
+      }
+    };
+
+    fetchFunction().then((data) => {
+      if (data) {
         setTeamMembers(
           data.data.slice(0, 4).map((member: any, index: number) => ({
             ...member,
@@ -35,8 +48,9 @@ export default function TeamsSection() {
                       : "Backend Dev"
                   }`,
           }))
-        )
-      );
+        );
+      }
+    });
   }, []);
 
   return (
