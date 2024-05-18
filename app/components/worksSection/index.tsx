@@ -2,11 +2,21 @@ import Image from "next/image";
 import Card from "@/components/Card";
 import CircleButton from "@/components/CircleButton";
 import IconHolder from "@/components/IconHolder";
+import Pill from "@/components/Pill";
+import Avatar from "@/components/Avatar";
 import Zenith from "@/public/Zenith.jpg";
 import ZenithIcon from "@/public/MagicStick.svg";
 import Aura from "@/public/Aura.jpg";
 import AuraIcon from "@/public/Balloon.svg";
-import Pill from "@/components/Pill";
+import Avatar1 from "@/public/Avatar1.png";
+import Avatar2 from "@/public/Avatar2.png";
+import Avatar3 from "@/public/Avatar3.png";
+import Avatar4 from "@/public/Avatar4.png";
+import Avatar5 from "@/public/Avatar5.png";
+import Avatar6 from "@/public/Avatar6.png";
+import Avatar7 from "@/public/Avatar7.png";
+import Avatar8 from "@/public/Avatar8.png";
+import Avatar9 from "@/public/Avatar9.png";
 
 const works = [
   {
@@ -19,6 +29,7 @@ const works = [
     description:
       "An all-in-one health and wellness app that offers personalized fitness plans, nutrition guidance.",
     technologies: ["React Native", "Firebase", "Redux", "REST API", "MongoDB"],
+    contributors: [Avatar1, Avatar2, Avatar3, Avatar4, Avatar5],
   },
   {
     image: Aura,
@@ -30,10 +41,11 @@ const works = [
     description:
       "A complete overhaul of a corporate website to enhance its brand identity and user experience.",
     technologies: ["Wordpress", "PHP", "HTML5", "CSS3", "JavaScript"],
+    contributors: [Avatar6, Avatar7, Avatar8, Avatar9, Avatar2],
   },
 ];
 
-export default function WorksComp() {
+export default function WorksSection() {
   return (
     <section className="flex flex-col">
       <Card>
@@ -87,14 +99,17 @@ export default function WorksComp() {
             </Card>
 
             <div className="hidden lg:flex lg:flex-col lg:gap-2.5 lg:order-3">
-              <Card>
+              <Card className="md:flex-grow">
                 <p className="text-base font-medium">TECHNOLOGIES USED</p>
                 <div className="flex flex-wrap gap-2.5">
                   <Pill contents={work.technologies} />
                 </div>
               </Card>
-              <Card>
+              <Card className="md:flex-grow">
                 <p className="text-base font-medium">TEAM MEMBERS</p>
+                <div className="flex flex-wrap gap-2.5">
+                  <Avatar imgSrc={work.contributors} />
+                </div>
               </Card>
             </div>
           </div>

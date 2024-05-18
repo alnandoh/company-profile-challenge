@@ -24,7 +24,7 @@ const aboutData = [
   },
 ];
 
-export default function AboutComp() {
+export default function AboutSection() {
   return (
     <section className="flex flex-col">
       <Card>

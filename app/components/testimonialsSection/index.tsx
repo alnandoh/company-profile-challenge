@@ -41,7 +41,7 @@ const testimonials = [
   },
 ];
 
-export default function TestimonialsComp() {
+export default function TestimonialsSection() {
   return (
     <section className="flex flex-col">
       <Card>

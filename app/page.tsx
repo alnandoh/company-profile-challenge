@@ -1,22 +1,26 @@
-import TestimonialsComp from "./components/testimonialsComp";
-import AboutComp from "./components/aboutComp";
+import TestimonialsSection from "./components/testimonialsSection";
+import AboutSection from "./components/aboutSection";
 import Faq from "./components/faq";
 import Hero from "./components/hero";
-import ServicesComp from "./components/servicesComp";
-import WorksComp from "./components/worksComp";
+import ServicesSection from "./components/servicesSection";
+import WorksComp from "./components/worksSection";
 import Tagline from "./components/tagline";
 import Timeline from "./components/timeline";
+import CultureSection from "./components/cultureSection";
+import TeamsSection from "./components/teamsSection";
 
 export default function Home() {
   return (
     <>
       <Hero />
       <Tagline />
-      <AboutComp />
+      <AboutSection />
+      <CultureSection />
       <Timeline />
-      <ServicesComp />
+      <ServicesSection />
       <WorksComp />
-      <TestimonialsComp />
+      <TestimonialsSection />
+      <TeamsSection />
       <Faq />
     </>
   );

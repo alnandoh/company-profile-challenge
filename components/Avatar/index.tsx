@@ -1,12 +1,26 @@
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
+import { StaticImageData } from "next/image";
 
 interface AvatarProps {
-  imgSrc: StaticImageData;
+  imgSrc: StaticImageData[];
 }
+
 export default function Avatar({ imgSrc }: AvatarProps) {
   return (
-    <div className="relative w-10 h-10 rounded-full bg-primary-800">
-      <Image src={imgSrc} alt={`${imgSrc} Icon`} />
+    <div className="flex gap-1">
+      {imgSrc.map((src, index) => (
+        <div
+          key={index}
+          className="relative w-10 h-10 rounded-full bg-primary-800 overflow-hidden"
+        >
+          <Image
+            src={src}
+            alt={`${src} Icon`}
+            layout="fill"
+            objectFit="cover"
+          />
+        </div>
+      ))}
     </div>
   );
 }

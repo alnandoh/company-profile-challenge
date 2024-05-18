@@ -78,6 +78,7 @@ export default function Footer() {
           "FOLLOW US ON SOCIAL MEDIA",
           "FOLLOW US ON SOCIAL MEDIA",
           "FOLLOW US ON SOCIAL MEDIA",
+          "FOLLOW US ON SOCIAL MEDIA",
         ]}
       />
       <div className="grid gap-2.5">
