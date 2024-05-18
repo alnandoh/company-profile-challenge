@@ -9,6 +9,48 @@ import Behance from "@/public/Behance.svg";
 import SocialMedia from "../SocialMedia";
 import InfiniteScroll from "../InfiniteScroll";
 
+const socialMediaLinks = [
+  {
+    url: "https://www.instagram.com/",
+    imageUrl: Instagram,
+    altText: "Instagram Icon",
+  },
+  {
+    url: "https://www.twitter.com/",
+    imageUrl: Twitter,
+    altText: "Twitter Icon",
+  },
+  {
+    url: "https://www.dribbble.com/",
+    imageUrl: Dribbble,
+    altText: "Dribble Icon",
+  },
+  {
+    url: "https://www.behance.com/",
+    imageUrl: Behance,
+    altText: "Behance Icon",
+  },
+];
+
+const footerLinks = [
+  {
+    title: "Home",
+    links: ["Why Us", "About Us", "Testimonials", "FAQ"],
+  },
+  {
+    title: "Pages",
+    links: ["Home", "Services", "About Us", "Teams"],
+  },
+  // {
+  //   title: "Projects",
+  //   links: ["Klothink", "Zenith", "Novus", "Apex"],
+  // },
+  // {
+  //   title: "Blogs",
+  //   links: ["Business", "Design", "Development"],
+  // },
+];
+
 export default function Footer() {
   return (
     <footer className="flex flex-col gap-[10px] mb-6">
@@ -38,97 +80,36 @@ export default function Footer() {
           "FOLLOW US ON SOCIAL MEDIA",
         ]}
       />
-      <div className="grid  gap-2.5">
+      <div className="grid gap-2.5">
         <div className="grid grid-cols-4 justify-between gap-[10px]">
-          <SocialMedia
-            url="https://www.instagram.com/"
-            imageUrl={Instagram}
-            altText="Instagram Icon"
-          />
-          <SocialMedia
-            url="https://www.twitter.com/"
-            imageUrl={Twitter}
-            altText="Twitter Icon"
-          />
-          <SocialMedia
-            url="https://www.dribbble.com/"
-            imageUrl={Dribbble}
-            altText="Dribble Icon"
-          />
-          <SocialMedia
-            url="https://www.behance.com/"
-            imageUrl={Behance}
-            altText="Behance Icon"
-          />
+          {socialMediaLinks.map((social, index) => (
+            <SocialMedia
+              key={index}
+              url={social.url}
+              imageUrl={social.imageUrl}
+              altText={social.altText}
+            />
+          ))}
         </div>
-        <div className="flex flex-col gap-2.5 ">
+        <div className="flex flex-col gap-2.5">
           <Card>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              <div className="flex flex-col gap-2.5">
-                <p className="font-bold text-lg text-primary-400 mb-1.5">
-                  Home
-                </p>
-                <Link href="/" className="text-shade-700 text-sm">
-                  Why Us
-                </Link>
-                <Link href="/" className="text-shade-700 text-sm">
-                  About Us
-                </Link>
-                <Link href="/" className="text-shade-700 text-sm">
-                  Testimonials
-                </Link>
-                <Link href="/" className="text-shade-700 text-sm">
-                  FAQ
-                </Link>
-              </div>
-              <div className="flex flex-col gap-[10px]">
-                <p className="font-bold text-lg text-primary-400 mb-1.5">
-                  Services
-                </p>
-                <Link href="/" className="text-shade-700 text-sm">
-                  Web Development
-                </Link>
-                <Link href="/" className="text-shade-700 text-sm">
-                  App Development
-                </Link>
-                <Link href="/" className="text-shade-700 text-sm">
-                  Web Design
-                </Link>
-                <Link href="/" className="text-shade-700 text-sm">
-                  Digital Marketing
-                </Link>
-              </div>
-              <div className="flex flex-col gap-[10px]">
-                <p className="font-bold text-lg text-primary-400 mb-1.5">
-                  Projects
-                </p>
-                <Link href="/" className="text-shade-700 text-sm">
-                  Klothink
-                </Link>
-                <Link href="/" className="text-shade-700 text-sm">
-                  Zenith
-                </Link>
-                <Link href="/" className="text-shade-700 text-sm">
-                  Novus
-                </Link>
-                <Link href="/" className="text-shade-700 text-sm">
-                  Apex
-                </Link>
-              </div>
-              <div className="flex flex-col gap-[10px]">
-                <p className="font-bold text-lg text-primary-400 mb-1.5">
-                  Blogs
-                </p>
-                <Link href="/" className="text-shade-700 text-sm">
-                  Business
-                </Link>
-                <Link href="/" className="text-shade-700 text-sm">
-                  Design
-                </Link>
-                <Link href="/" className="text-shade-700 text-sm">
-                  Development
-                </Link>
-              </div>
+            <div className="grid grid-cols-2 gap-4">
+              {footerLinks.map((section, index) => (
+                <div key={index} className="flex flex-col gap-2.5">
+                  <p className="font-bold text-lg text-primary-400 mb-1.5">
+                    {section.title}
+                  </p>
+                  {section.links.map((link, idx) => (
+                    <Link
+                      key={idx}
+                      href="/"
+                      className="text-shade-600 text-sm transition duration-200 ease-in-out hover:underline hover:text-shade-300"
+                    >
+                      {link}
+                    </Link>
+                  ))}
+                </div>
+              ))}
             </div>
           </Card>
           <Card className="md:flex-row md:justify-between md:gap-8">

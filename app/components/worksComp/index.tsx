@@ -42,7 +42,7 @@ export default function WorksComp() {
       <section className="flex flex-col gap-2.5">
         {works.map((work, index) => (
           <div key={index} className="grid gap-y-2.5 lg:grid-cols-3 lg:gap-2.5">
-            <div className="relative h-full lg:order-2">
+            <div className="relative h-64 lg:h-full lg:order-2">
               <Image
                 src={work.image}
                 alt={work.altText}
@@ -52,28 +52,33 @@ export default function WorksComp() {
             </div>
 
             <Card className="lg:order-1">
-              <IconHolder
-                imageUrl={work.icon}
-                altText={work.altText}
-                text={work.title}
-              />
-              <div className="flex flex-col gap-2 lg:gap-2.5">
-                <div className="flex items-center gap-1 w-max bg-dark-600 rounded-[45px] px-2.5 py-1.5">
-                  <p className="text-shade-600 text-xs xl:text-sm">Category</p>
-                  <div className="rounded-full w-1 h-1 bg-primary-800"></div>
-                  <p className="text-shade-400 text-xs xl:text-sm">
-                    {work.category}
-                  </p>
+              <div className="flex flex-col gap-2.5 lg:gap-7">
+                <IconHolder
+                  imageUrl={work.icon}
+                  altText={work.altText}
+                  text={work.title}
+                />
+                <div className="flex flex-col gap-2">
+                  <div className="flex items-center gap-1 w-max bg-dark-600 rounded-[45px] px-2.5 py-1.5">
+                    <p className="text-shade-600 text-xs xl:text-sm">
+                      Category
+                    </p>
+                    <div className="rounded-full w-1 h-1 bg-primary-800"></div>
+                    <p className="text-shade-400 text-xs xl:text-sm">
+                      {work.category}
+                    </p>
+                  </div>
+                  <div className="flex items-center gap-1 w-max bg-dark-600 rounded-[45px] px-2.5 py-1.5">
+                    <p className="text-shade-600 text-xs xl:text-sm">
+                      Time Taken
+                    </p>
+                    <div className="rounded-full w-1 h-1 bg-primary-800"></div>
+                    <p className="text-shade-400 text-xs xl:text-sm">
+                      {work.timeTaken}
+                    </p>
+                  </div>
                 </div>
-                <div className="flex items-center gap-1 w-max bg-dark-600 rounded-[45px] px-2.5 py-1.5">
-                  <p className="text-shade-600 text-xs xl:text-sm">
-                    Time Taken
-                  </p>
-                  <div className="rounded-full w-1 h-1 bg-primary-800"></div>
-                  <p className="text-shade-400 text-xs xl:text-sm">
-                    {work.timeTaken}
-                  </p>
-                </div>
+
                 <p className="text-sm xl:text-base text-shade-400 lg:mt-1.5">
                   {work.description}
                 </p>

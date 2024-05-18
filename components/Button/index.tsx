@@ -23,7 +23,7 @@ export default function Button({ text, bg, arrow, href }: ButtonProps) {
       {arrow && (
         <Image
           src={UpRightArrow}
-          alt=""
+          alt="Up Right Arrow Icon"
           className="transition-transform duration-200 group-hover/button:translate-x-1.5 delay-200 group-hover/button:-translate-y-1.5 group-hover/button:scale-110"
         />
       )}
