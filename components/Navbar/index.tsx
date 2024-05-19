@@ -50,7 +50,7 @@ export default function Navbar() {
           <Link
             key={index}
             href={item.href}
-            className={`font-medium leading-[150%] px-2.5 py-1.5 lg:px-5 lg:py-3.5 md:bg-dark-800 rounded-xl active:text-primary-600 text-base transition duration-200 ease-in-out md:hover:underline md:hover:text-primary-600 md:hover:scale-105 ${
+            className={`md:font-medium leading-[150%] px-2.5 py-1.5 lg:px-5 lg:py-3.5 md:bg-dark-800 rounded-xl active:text-primary-600 text-base transition duration-200 ease-in-out md:hover:underline md:hover:text-primary-600 md:hover:scale-105 ${
               item.hidden ? "hidden" : ""
             } ${item.bgClass}`}
           >

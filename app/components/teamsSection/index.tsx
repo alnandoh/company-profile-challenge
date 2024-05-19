@@ -7,7 +7,7 @@ import TeamMemberDataFetcher from "@/hook/TeamMemberDataFetcher";
 export default function TeamsSection() {
   const teamMembers = TeamMemberDataFetcher();
   return (
-    <section className="flex flex-col">
+    <section className="space-y-2.5">
       <Card>
         <h2>Meet Our Team</h2>
       </Card>
@@ -18,8 +18,9 @@ export default function TeamsSection() {
               <Image
                 src={member.avatar}
                 alt={`${member.first_name} ${member.last_name}`}
-                layout="fill"
-                objectFit="cover"
+                fill={true}
+                sizes="100%"
+                className="object-cover inset-0 m-auto"
               />
             </div>
 
@@ -30,7 +31,7 @@ export default function TeamsSection() {
           </Card>
         ))}
       </div>
-      <Button text="See More" href="teams" />
+      <Button text="Check Our Team" href="teams" />
     </section>
   );
 }

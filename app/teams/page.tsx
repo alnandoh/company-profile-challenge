@@ -8,7 +8,7 @@ import CultureSection from "../about/components/cultureSection";
 export default function Teams() {
   const teamMembers = TeamMemberDataFetcher();
   return (
-    <section className="flex flex-col">
+    <section className="space-y-2.5">
       <Card>
         <h2>Meet Our Team</h2>
       </Card>
@@ -19,8 +19,10 @@ export default function Teams() {
               <Image
                 src={member.avatar}
                 alt={`${member.first_name} ${member.last_name}`}
-                layout="fill"
+                fill={true}
                 objectFit="cover"
+                loading="eager"
+                priority={true}
               />
             </div>
 

@@ -23,12 +23,15 @@ const companyCultureData = [
       "We foster a culture of collaboration and teamwork. By working together effectively and supporting one another, we harness the collective strengths of our diverse team to drive innovation and success.",
   },
 ];
+interface cultureSectionProps {
+  hidden?: boolean;
+}
 
-export default function CultureSection() {
+export default function CultureSection({ hidden }: cultureSectionProps) {
   return (
-    <section className="flex flex-col">
+    <section className="space-y-2.5">
       <Card>
-        <h2>Our Culture</h2>
+        <h2>Company Culture</h2>
       </Card>
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-2.5">
         {companyCultureData.map((item, index) => (
@@ -44,7 +47,8 @@ export default function CultureSection() {
           </Card>
         ))}
       </div>
-      <Button text="Learn More" href="about" />
+
+      {!hidden && <Button text="About Us" href="about" />}
     </section>
   );
 }

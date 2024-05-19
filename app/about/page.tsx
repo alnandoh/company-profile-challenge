@@ -6,7 +6,7 @@ export default function About() {
   return (
     <>
       <Timeline />
-      <CultureSection />
+      <CultureSection hidden={true} />
       <TeamsSection />
     </>
   );

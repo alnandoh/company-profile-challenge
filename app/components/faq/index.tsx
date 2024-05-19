@@ -32,7 +32,7 @@ const faqs = [
 
 export default function Faq() {
   return (
-    <section className="flex flex-col">
+    <section className="space-y-2.5">
       <Card>
         <h2>Frequently Asked Questions</h2>
       </Card>

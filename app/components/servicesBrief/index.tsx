@@ -41,9 +41,9 @@ const services = [
   },
 ];
 
-const ServicesSection = () => {
+export default function ServicesBrief() {
   return (
-    <section className="flex flex-col">
+    <section className="space-y-2.5">
       <Card>
         <h2>Our Services</h2>
       </Card>
@@ -71,6 +71,4 @@ const ServicesSection = () => {
       </div>
     </section>
   );
-};
-
-export default ServicesSection;
+}

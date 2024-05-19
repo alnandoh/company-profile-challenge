@@ -39,7 +39,7 @@ const contentData = [historyContent, cultureContent];
 export default function AboutSection() {
   return (
     <>
-      <section className="flex flex-col">
+      <section className="space-y-2.5">
         <Card>
           <h2>Reasons to Choose NexGen for Your Digital Journey</h2>
         </Card>
@@ -73,8 +73,8 @@ export default function AboutSection() {
               </p>
             </Card>
           ))}
-          <Button text="Learn More" href="about" />
         </div>
+        <Button text="Learn More" href="about" />
       </section>
     </>
   );

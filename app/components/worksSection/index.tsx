@@ -47,7 +47,7 @@ const works = [
 
 export default function WorksSection() {
   return (
-    <section className="flex flex-col">
+    <section className="space-y-2.5">
       <Card>
         <h2>Our Works</h2>
       </Card>

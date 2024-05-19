@@ -16,8 +16,9 @@ export default function Avatar({ imgSrc }: AvatarProps) {
           <Image
             src={src}
             alt={`${src} Icon`}
-            layout="fill"
-            objectFit="cover"
+            fill={true}
+            sizes="100%"
+            className="inset-0 mx-auto object-cover"
           />
         </div>
       ))}

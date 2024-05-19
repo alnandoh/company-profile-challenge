@@ -43,7 +43,7 @@ const testimonials = [
 
 export default function TestimonialsSection() {
   return (
-    <section className="flex flex-col">
+    <section className="space-y-2.5">
       <Card>
         <h2>Testimonials</h2>
       </Card>
