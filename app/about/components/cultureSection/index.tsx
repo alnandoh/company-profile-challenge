@@ -48,7 +48,7 @@ export default function CultureSection({ hidden }: cultureSectionProps) {
         ))}
       </div>
 
-      {!hidden && <Button text="About Us" href="about" />}
+      {!hidden && <Button text="Check Us Out" href="about" />}
     </section>
   );
 }

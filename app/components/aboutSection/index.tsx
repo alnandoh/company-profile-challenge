@@ -57,7 +57,7 @@ export default function AboutSection() {
             </Card>
           ))}
         </div>
-        <Button text="Learn More" href="about" />
+        <Button text="Check our company" href="about" />
       </section>
 
       <section className="space-y-2.5">
@@ -74,7 +74,7 @@ export default function AboutSection() {
             </Card>
           ))}
         </div>
-        <Button text="Learn More" href="about" />
+        <Button text="Check our company" href="about" />
       </section>
     </>
   );

@@ -10,7 +10,6 @@ export default function Hero() {
   return (
     <>
       <section className="space-y-2.5 gap-5 md:p-10 lg:p-20 lg:gap-8 relative overflow-hidden bg-dark-800">
-        <VideoPlayer videoSrc={videoUrl} />
         <h1 className="font-semibold text-3xl md:text-6xl uppercase">
           Digital solutions
           <br /> that drive success
@@ -24,6 +23,7 @@ export default function Hero() {
         <HeroButton />
         <div className="my-2 hidden md:block"></div>
         <InfiniteScroll />
+        <VideoPlayer videoSrc={videoUrl} />
       </section>
       <Achievement />
     </>

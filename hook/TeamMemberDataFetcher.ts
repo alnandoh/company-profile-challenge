@@ -41,8 +41,6 @@ export default function TeamMemberDataFetcher() {
             const mergedObj = { ...arr1[i], ...arr2[i] };
             arr3.push(mergedObj);
           }
-
-          console.log(arr3);
           setTeamMembers(arr3);
         }
       } catch (error) {
