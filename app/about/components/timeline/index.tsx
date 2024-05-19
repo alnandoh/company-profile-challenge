@@ -1,3 +1,4 @@
+"use client";
 import Card from "@/components/Card";
 
 const milestones = [
@@ -80,11 +81,11 @@ const milestones = [
 
 export default function Timeline() {
   return (
-    <section>
+    <section className="space-y-2.5">
       <Card>
         <h2>Our Journey</h2>
       </Card>
-      <section className="grid gap-2.5 grid-cols-1 md:grid-cols-2">
+      <section className="grid gap-2.5 md:grid-cols-2 ">
         {milestones.map((milestone, index) => (
           <Card key={index}>
             <div className="w-fit mt-2 mb-1 ml-2 text-xl lg:text-2xl bg-dark-600 rounded-lg px-2 py-1 text-primary-700 transition duration-200 ease-in-out hover:text-primary-800 hover:scale-110">

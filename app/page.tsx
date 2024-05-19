@@ -5,8 +5,6 @@ import Hero from "./components/hero";
 import ServicesSection from "./components/servicesSection";
 import WorksComp from "./components/worksSection";
 import Tagline from "./components/tagline";
-import Timeline from "./components/timeline";
-import CultureSection from "./components/cultureSection";
 import TeamsSection from "./components/teamsSection";
 
 export default function Home() {
@@ -15,8 +13,6 @@ export default function Home() {
       <Hero />
       <Tagline />
       <AboutSection />
-      <CultureSection />
-      <Timeline />
       <ServicesSection />
       <WorksComp />
       <TestimonialsSection />

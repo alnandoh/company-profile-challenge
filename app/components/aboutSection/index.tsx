@@ -24,27 +24,58 @@ const aboutData = [
   },
 ];
 
+const historyContent = {
+  title: "HISTORY",
+  content: `NexGen Digital embarked on its journey in 2020, marked by its founding year. With a mission to revolutionize digital solutions, it has since grown to deliver innovative services and secure major clients, paving the way for comprehensive digital marketing services.`,
+};
+
+const cultureContent = {
+  title: "CULTURE",
+  content: `We prioritize professionalism, excellence, and a healthy work-life balance. Our culture fosters continuous learning, growth, collaboration, and teamwork, empowering our team members to deliver exceptional digital solutions while thriving personally and professionally.`,
+};
+
+const contentData = [historyContent, cultureContent];
+
 export default function AboutSection() {
   return (
-    <section className="flex flex-col">
-      <Card>
-        <h2>Reasons to Choose NexGen for Your Digital Journey</h2>
-      </Card>
-      <div className="grid md:grid-cols-2 2xl:grid-cols-4 gap-2.5">
-        {aboutData.map((item, index) => (
-          <Card key={index}>
-            <div className="flex flex-col gap-2 ">
-              <p className="text-xl uppercase font-medium leading-[150%]">
-                {item.title}
+    <>
+      <section className="flex flex-col">
+        <Card>
+          <h2>Reasons to Choose NexGen for Your Digital Journey</h2>
+        </Card>
+        <div className="grid md:grid-cols-2 2xl:grid-cols-4 gap-2.5">
+          {aboutData.map((item, index) => (
+            <Card key={index}>
+              <div className="flex flex-col gap-2 ">
+                <p className="text-xl uppercase font-medium leading-[150%]">
+                  {item.title}
+                </p>
+                <p className="text-sm leading-[150%] text-shade-500">
+                  {item.content}
+                </p>
+              </div>
+            </Card>
+          ))}
+        </div>
+        <Button text="Learn More" href="about" />
+      </section>
+
+      <section className="space-y-2.5">
+        <Card>
+          <h2>History & Culture</h2>
+        </Card>
+        <div className="grid md:grid-cols-2 gap-2.5">
+          {contentData.map((content, index) => (
+            <Card key={index}>
+              <p className="text-xl">{content.title}</p>
+              <p className="text-sm md:text-base text-shade-500">
+                {content.content}
               </p>
-              <p className="text-sm leading-[150%] text-shade-500">
-                {item.content}
-              </p>
-            </div>
-          </Card>
-        ))}
-      </div>
-      <Button text="Learn More" href="about" />
-    </section>
+            </Card>
+          ))}
+          <Button text="Learn More" href="about" />
+        </div>
+      </section>
+    </>
   );
 }

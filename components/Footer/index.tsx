@@ -115,8 +115,7 @@ export default function Footer() {
           </Card>
           <Card className="md:flex-row md:justify-between md:gap-8">
             <div className="flex flex-col gap-2">
-              <p className="text-shade-600 text-sm mb-1">NEWSLETTER</p>
-              <p className="font-medium text-xl md:text-lg">
+              <p className="font-medium text-xl md:text-lg text-primary-300">
                 SUBSCRIBE TO OUR NEWSLETTER
               </p>
             </div>
@@ -131,15 +130,25 @@ export default function Footer() {
           </Card>
           <Card>
             <div className="flex flex-col md:flex-row md:justify-between items-center text-shade-600 gap-5">
-              <p>
+              <p className="text-primary-300">
                 © 2024 NexGen&ensp;
                 <br className="md:hidden" />
                 All rights reserved
               </p>
               <div className="flex flex-col md:flex-row items-center gap-1 md:gap-4">
-                <Link href="/">Terms & Conditions</Link>
+                <Link
+                  href="/"
+                  className="hover:font-medium hover:text-primary-100"
+                >
+                  Terms & Conditions
+                </Link>
                 <div className="w-full border-b border-shade-800 md:hidden"></div>
-                <Link href="/">Privacy Policy</Link>
+                <Link
+                  href="/"
+                  className="hover:font-medium hover:text-primary-100"
+                >
+                  Privacy Policy
+                </Link>
               </div>
             </div>
           </Card>
