@@ -12,7 +12,7 @@ export const particleConfig: ISourceOptions = {
     enable: false,
   },
   detectRetina: true,
-  fpsLimit: 120,
+  fpsLimit: 60,
   interactivity: {
     detectsOn: "canvas",
     events: {
