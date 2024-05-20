@@ -30,7 +30,7 @@ export default function RootLayout({
         <link
           rel="preload"
           as="image"
-          href="https://res.cloudinary.com/dswhfzczf/image/upload/v1716177351/conference_meeting2_ymbhkp.webp"
+          href="https://res.cloudinary.com/dswhfzczf/video/upload/v1716176914/meeting-conference1.webm"
         />
       </head>
       <body className={roboto_flex.className}>

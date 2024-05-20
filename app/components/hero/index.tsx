@@ -4,14 +4,14 @@ import InfiniteScroll from "@/components/InfiniteScroll";
 import VideoPlayer from "@/components/VideoPlayer";
 
 const videoUrl =
-  "https://res.cloudinary.com/dswhfzczf/video/upload/v1716176914/meeting-conference-abcd.webm";
+  "https://res.cloudinary.com/dswhfzczf/video/upload/v1716176914/meeting-conference1.webm";
 const videoPoster =
-  "https://res.cloudinary.com/dswhfzczf/image/upload/v1716177351/conference_meeting2_ymbhkp.webp";
+  "https://res.cloudinary.com/dswhfzczf/image/upload/v1716173044/meeting-conference1.webp";
 
 export default function Hero() {
   return (
     <>
-      <section className="space-y-2.5 gap-5 md:p-10 lg:p-20 lg:gap-8 relative overflow-hidden bg-dark-800">
+      <section className="space-y-2.5 md:p-10 lg:p-20 relative overflow-hidden bg-dark-800">
         <h1 className="font-semibold text-3xl md:text-6xl uppercase">
           Digital solutions
           <br /> that drive success
