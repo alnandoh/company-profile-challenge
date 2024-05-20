@@ -8,13 +8,11 @@ interface HeaderProps {
 
 export default function Header({ heading1, content }: HeaderProps) {
   return (
-    <section className="bg-dark-700 flex flex-col gap-5 md:p-10">
-      <h1 className="font-semibold text-3xl md:text-6xl uppercase">
+    <section className="flex flex-col gap-5 md:p-10 lg:p-20 bg-dark-700">
+      <h1 className="font-semibold text-3xl md:text-6xl uppercase w-[300px] md:w-auto">
         {heading1}
       </h1>
-      <p className="text-shade-500 text-sm md:text-lg leading-[150%]">
-        {content}
-      </p>
+      <p className="text-shade-500 text-sm md:text-lg">{content}</p>
       <HeroButton />
       <InfiniteScroll />
     </section>
