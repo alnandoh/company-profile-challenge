@@ -92,7 +92,10 @@ export default function ServicesSection({ details }: ServicesSectionProps) {
                   {service.description}
                 </p>
               </div>
-              <Button text="Book a call" href="#" />
+              <Button
+                text="Book a call"
+                href="https://wa.me/message/MZ3TNFQEEAV5H1"
+              />
             </Card>
             {details && (
               <Card className="hidden md:flex lg:col-span-2 md:flex-col ">
@@ -120,6 +123,7 @@ export default function ServicesSection({ details }: ServicesSectionProps) {
           </React.Fragment>
         ))}
       </div>
+      <Button text="Check Our Services" href="/services" />
     </section>
   );
 }
