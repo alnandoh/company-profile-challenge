@@ -3,10 +3,13 @@ import Card from "@/components/Card";
 import IconHolder from "@/components/IconHolder";
 import Pill from "@/components/Pill";
 import Suitcase from "@/public/Suitcase.svg";
+import Smartphone from "@/public/Smartphone.svg";
+import Pipette from "@/public/Pipette.svg";
+import Balloon from "@/public/Balloon.svg";
 
 const jobAvailable = [
   {
-    icon: Suitcase,
+    icon: Pipette,
     name: "Web Designer",
     salary: "$45,000 - $60,000 per year",
     experience: "1+ years",
@@ -15,7 +18,7 @@ const jobAvailable = [
       "Proficiency in Adobe Creative Suite (Photoshop, Illustrator, etc.), strong understanding of UI/UX design principles, responsive design expertise.",
   },
   {
-    icon: Suitcase,
+    icon: Smartphone,
     name: "Mobile App Developer",
     salary: "$55,000 - $75,000 per year",
     experience: "2+ years",
@@ -24,7 +27,7 @@ const jobAvailable = [
       "Proficiency in iOS or Android development (Swift, Kotlin), knowledge of mobile app design patterns, experience with mobile testing and debugging.",
   },
   {
-    icon: Suitcase,
+    icon: Balloon,
     name: "Digital Marketing Specialist",
     salary: "$50,000 - $65,000 per year",
     experience: "3+ years",
@@ -72,6 +75,10 @@ export default function CareerSection() {
           </Card>
         ))}
       </div>
+      <Card>
+        <h3 className="md:text-center">Or send your CV for our talent pool</h3>
+        <Button text="Send us your CV" href="#" />
+      </Card>
     </section>
   );
 }
