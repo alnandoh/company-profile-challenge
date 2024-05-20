@@ -21,7 +21,7 @@ export default function SocialMedia({ imageUrl, name, url }: SocialMediaProps) {
         alt={`${name} Icon`}
         className="group-hover/socialmedia:scale-150 group-hover/socialmedia:animate-pulse transition"
       />
-      <p>{name}</p>
+      <p className="hidden lg:block">{name}</p>
     </Link>
   );
 }
