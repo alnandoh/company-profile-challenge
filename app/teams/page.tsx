@@ -3,7 +3,6 @@ import Card from "@/components/Card";
 import Image from "next/image";
 import TeamMemberDataFetcher from "@/hook/TeamMemberDataFetcher";
 import Button from "@/components/Button";
-import CultureSection from "../about/components/cultureSection";
 import Header from "@/components/Header";
 
 export default function Teams() {
@@ -47,7 +46,6 @@ export default function Teams() {
             </Card>
           ))}
         </div>
-        <CultureSection />
         <Card>
           <h2>Join Our Team</h2>
           <p className="text-shade-500 mt-2">

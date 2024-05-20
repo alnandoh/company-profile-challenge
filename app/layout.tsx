@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Roboto_Mono, Roboto_Flex } from "next/font/google";
+import { Roboto_Flex } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -8,7 +8,6 @@ import ScrollToTop from "@/components/ScrollToTop";
 import CTAButton from "@/components/CTAButton";
 import BgParticles from "@/components/BgParticles";
 
-const roboto_mono = Roboto_Mono({ subsets: ["latin"] });
 const roboto_flex = Roboto_Flex({ subsets: ["latin"] });
 
 export const metadata: Metadata = {

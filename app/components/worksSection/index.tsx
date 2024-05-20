@@ -57,7 +57,7 @@ export default function WorksSection() {
             key={index}
             className="grid md:grid-cols-2 gap-y-2.5 lg:grid-cols-3 md:gap-2.5"
           >
-            <div className="relative h-64 md:h-full md:order-2">
+            <div className="relative h-64 md:h-full md:w-full md:order-2">
               <Image
                 src={work.image}
                 alt={work.altText}
