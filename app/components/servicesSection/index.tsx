@@ -123,7 +123,7 @@ export default function ServicesSection({ details }: ServicesSectionProps) {
           </React.Fragment>
         ))}
       </div>
-      <Button text="Check Our Services" href="/services" />
+      {!details && <Button text="Check Our Services" href="/services" />}
     </section>
   );
 }
