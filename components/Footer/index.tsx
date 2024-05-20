@@ -13,22 +13,22 @@ const socialMediaLinks = [
   {
     url: "https://www.instagram.com/",
     imageUrl: Instagram,
-    altText: "Instagram Icon",
+    name: "Instagram",
   },
   {
     url: "https://www.twitter.com/",
     imageUrl: Twitter,
-    altText: "Twitter Icon",
+    name: "Twitter",
   },
   {
     url: "https://www.dribbble.com/",
     imageUrl: Dribbble,
-    altText: "Dribble Icon",
+    name: "Dribble",
   },
   {
     url: "https://www.behance.com/",
     imageUrl: Behance,
-    altText: "Behance Icon",
+    name: "Behance",
   },
 ];
 
@@ -92,19 +92,19 @@ export default function Footer() {
           "FOLLOW US ON SOCIAL MEDIA",
         ]}
       />
-      <div className="grid gap-2.5">
-        <div className="grid grid-cols-4 justify-between gap-[10px]">
-          {socialMediaLinks.map((social, index) => (
-            <SocialMedia
-              key={index}
-              url={social.url}
-              imageUrl={social.imageUrl}
-              altText={social.altText}
-            />
-          ))}
-        </div>
-        <div className="flex flex-col gap-2.5">
-          <Card>
+      <div className="flex flex-col gap-2.5">
+        <div className="grid lg:grid-cols-3 gap-y-2.5 lg:gap-2.5">
+          <div className="grid grid-cols-4 lg:grid-cols-2 justify-between gap-[10px]">
+            {socialMediaLinks.map((social, index) => (
+              <SocialMedia
+                key={index}
+                url={social.url}
+                imageUrl={social.imageUrl}
+                name={social.name}
+              />
+            ))}
+          </div>
+          <Card className="lg:col-span-2">
             <div className="grid grid-cols-2 gap-4">
               {footerLinks.map((section, index) => (
                 <div key={index} className="flex flex-col gap-2.5">
@@ -124,49 +124,49 @@ export default function Footer() {
               ))}
             </div>
           </Card>
-          <Card className="md:flex-row md:justify-between md:gap-8">
-            <div className="flex flex-col gap-2">
-              <p className="font-medium text-xl md:text-lg text-primary-300">
-                SUBSCRIBE TO OUR NEWSLETTER
-              </p>
-            </div>
-            <div className="flex justify-between items-center gap-3 md:place-self-end md:flex-grow">
-              <input
-                type="email"
-                id="subscribeEmail"
-                name="email"
-                autoComplete="on"
-                placeholder="Enter your email"
-                className="w-full bg-dark-700 border-b border-dark-400 py-2 px-4 text-sm focus:outline-none md:text-base focus:border-primary-300 flex-grow"
-              />
-              <CircleButton />
-            </div>
-          </Card>
-          <Card>
-            <div className="flex flex-col md:flex-row md:justify-between items-center text-shade-600 gap-5">
-              <p className="text-primary-300">
-                © 2024 NexGen&ensp;
-                <br className="md:hidden" />
-                All rights reserved
-              </p>
-              <div className="flex flex-col md:flex-row items-center gap-1 md:gap-4">
-                <Link
-                  href="/"
-                  className="hover:font-medium hover:text-primary-100"
-                >
-                  Terms & Conditions
-                </Link>
-                <div className="w-full border-b border-shade-800 md:hidden"></div>
-                <Link
-                  href="/"
-                  className="hover:font-medium hover:text-primary-100"
-                >
-                  Privacy Policy
-                </Link>
-              </div>
-            </div>
-          </Card>
         </div>
+        <Card className="md:flex-row md:justify-between md:gap-8">
+          <div className="flex flex-col gap-2">
+            <p className="font-medium text-xl md:text-lg text-primary-300">
+              SUBSCRIBE TO OUR NEWSLETTER
+            </p>
+          </div>
+          <div className="flex justify-between items-center gap-3 md:place-self-end md:flex-grow">
+            <input
+              type="email"
+              id="subscribeEmail"
+              name="email"
+              autoComplete="on"
+              placeholder="Enter your email"
+              className="w-full bg-dark-700 border-b border-dark-400 py-2 px-4 text-sm focus:outline-none md:text-base focus:border-primary-300 flex-grow"
+            />
+            <CircleButton />
+          </div>
+        </Card>
+        <Card>
+          <div className="flex flex-col md:flex-row md:justify-between items-center text-shade-600 gap-5">
+            <p className="text-primary-300">
+              © 2024 NexGen&ensp;
+              <br className="md:hidden" />
+              All rights reserved
+            </p>
+            <div className="flex flex-col md:flex-row items-center gap-1 md:gap-4">
+              <Link
+                href="/"
+                className="hover:font-medium hover:text-primary-100"
+              >
+                Terms & Conditions
+              </Link>
+              <div className="w-full border-b border-shade-800 md:hidden"></div>
+              <Link
+                href="/"
+                className="hover:font-medium hover:text-primary-100"
+              >
+                Privacy Policy
+              </Link>
+            </div>
+          </div>
+        </Card>
       </div>
     </footer>
   );
