@@ -122,6 +122,9 @@ export default function Footer() {
             <div className="flex justify-between items-center gap-3 md:place-self-end md:flex-grow">
               <input
                 type="email"
+                id="subscribeEmail"
+                name="email"
+                autoComplete="on"
                 placeholder="Enter your email"
                 className="w-full bg-dark-700 border-b border-dark-400 py-2 px-4 text-sm focus:outline-none md:text-base focus:border-primary-300 flex-grow"
               />

@@ -5,6 +5,8 @@ import VideoPlayer from "@/components/VideoPlayer";
 
 const videoUrl =
   "https://res.cloudinary.com/dswhfzczf/video/upload/f_auto:video,q_auto/meeting-conference";
+const videoPoster =
+  "https://res.cloudinary.com/dswhfzczf/image/upload/f_auto,q_auto/meeting-conference";
 
 export default function Hero() {
   return (
@@ -23,7 +25,7 @@ export default function Hero() {
         <HeroButton />
         <div className="my-2 hidden md:block"></div>
         <InfiniteScroll />
-        <VideoPlayer videoSrc={videoUrl} />
+        <VideoPlayer videoSrc={videoUrl} videoPoster={videoPoster} />
       </section>
       <Achievement />
     </>

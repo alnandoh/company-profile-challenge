@@ -10,6 +10,9 @@ export default function Form() {
           <p className="font-medium leading-6 mb-2">NAME</p>
           <input
             type="text"
+            id="name"
+            name="name"
+            autoComplete="on"
             placeholder="Enter your name"
             className="p-4 bg-dark-800 text-shade-800 w-full rounded-lg"
           ></input>
@@ -18,6 +21,9 @@ export default function Form() {
           <p className="font-medium leading-6 mb-2">EMAIL</p>
           <input
             type="email"
+            id="email"
+            name="email"
+            autoComplete="on"
             placeholder="Enter your email"
             className="p-4 bg-dark-800 text-shade-800 w-full rounded-lg"
           ></input>
@@ -25,6 +31,8 @@ export default function Form() {
         <div>
           <p className="font-medium leading-6 mb-2">YOUR QUESTIONS</p>
           <textarea
+            id="message"
+            name="message"
             placeholder="Enter your question here..."
             className="p-4 bg-dark-800 text-shade-800 w-full rounded-lg"
           ></textarea>

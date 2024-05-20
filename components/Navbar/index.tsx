@@ -32,7 +32,13 @@ export default function Navbar() {
     >
       <div className="flex items-center justify-between">
         <Link href="/" className="md:pl-8 lg:pl-8">
-          <Image src={NexgenLogo} alt="NexGen Logo" width={100} height={24} />
+          <Image
+            src={NexgenLogo}
+            alt="NexGen Logo"
+            width={100}
+            height={24}
+            loading="eager"
+          />
         </Link>
         <button
           onClick={toggleMenu}

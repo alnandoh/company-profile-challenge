@@ -14,6 +14,9 @@ const roboto_flex = Roboto_Flex({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "NexGen Agency Website",
   description: "Indonesia's next generation digital agency",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
@@ -23,6 +26,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link
+          rel="preload"
+          as="image"
+          href="https://res.cloudinary.com/dswhfzczf/image/upload/f_auto,q_auto/meeting-conference"
+        />
+      </head>
       <body className={roboto_flex.className}>
         <ProgressBar />
         <Navbar />
