@@ -39,7 +39,7 @@ export default function CircleButton({ image, text }: CircleButtonProps) {
               }`}
             />
           </div>
-          <p className="font-medium uppercase transition group-hover/circle:text-primary-800 group-hover/circle:[text-shadow:_1px_1px_3px_rgb(255_255_255_/_60%)]">
+          <p className="font-medium text-sm uppercase transition group-hover/circle:text-primary-800 group-hover/circle:[text-shadow:_1px_1px_3px_rgb(255_255_255_/_60%)]">
             {text}
           </p>
         </button>
@@ -48,7 +48,7 @@ export default function CircleButton({ image, text }: CircleButtonProps) {
           <Image
             src={imgSrc}
             alt={`${image} Icon`}
-            className={`absolute top-0 bottom-0 left-0 right-0 m-auto items-center transition "group-hover/circle:translate-x-1 group-hover/circle:-translate-y-1"`}
+            className={`top-0 bottom-0 left-0 right-0 m-auto items-center transition "group-hover/circle:translate-x-1 group-hover/circle:-translate-y-1"`}
           />
         </button>
       )}

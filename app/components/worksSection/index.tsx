@@ -47,14 +47,17 @@ const works = [
 
 export default function WorksSection() {
   return (
-    <section className="space-y-2.5">
+    <section className="space-y-2.5" id="worksSection">
       <Card>
         <h2>Our Works</h2>
       </Card>
       <section className="flex flex-col gap-2.5">
         {works.map((work, index) => (
-          <div key={index} className="grid gap-y-2.5 lg:grid-cols-3 lg:gap-2.5">
-            <div className="relative h-64 lg:h-full lg:order-2">
+          <div
+            key={index}
+            className="grid md:grid-cols-2 gap-y-2.5 lg:grid-cols-3 md:gap-2.5"
+          >
+            <div className="relative h-64 md:h-full md:order-2">
               <Image
                 src={work.image}
                 alt={work.altText}
@@ -63,7 +66,7 @@ export default function WorksSection() {
               />
             </div>
 
-            <Card className="lg:order-1">
+            <Card className="md:order-1">
               <div className="flex flex-col gap-2.5 lg:gap-7">
                 <IconHolder
                   imageUrl={work.icon}

@@ -1,13 +1,15 @@
 "use client";
 
 import Image from "next/image";
-import hamburger from "@/public/Hamburger.svg";
+import Hamburger from "@/public/Hamburger.svg";
 import NexgenLogo from "@/public/NexgenLogo.svg";
 import Link from "next/link";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -25,7 +27,7 @@ export default function Navbar() {
       bgClass: "!bg-primary-800 !text-dark-800 whitespace-nowrap",
     },
   ];
-
+  console.log(pathname);
   return (
     <div
       className={`bg-dark-700 mt-6 px-4 py-3 rounded-lg md:flex md:justify-between md:items-center`}
@@ -44,7 +46,7 @@ export default function Navbar() {
           onClick={toggleMenu}
           className="md:hidden bg-dark-800 h-11 w-11 flex items-center justify-center rounded-xl"
         >
-          <Image src={hamburger} alt="Hamburger Icon" />
+          <Image src={Hamburger} alt="Hamburger Icon" />
         </button>
       </div>
       <div
@@ -56,9 +58,11 @@ export default function Navbar() {
           <Link
             key={index}
             href={item.href}
-            className={`md:font-medium leading-[150%] px-2.5 py-1.5 lg:px-5 lg:py-3.5 md:bg-dark-800 rounded-xl active:text-primary-600 text-base transition duration-200 ease-in-out md:hover:underline md:hover:text-primary-600 md:hover:scale-105 ${
+            className={`md:font-medium leading-[150%] px-2.5 py-1.5 lg:px-5 lg:py-3.5 md:bg-dark-800 rounded-xl text-base transition duration-200 ease-in-out md:hover:underline md:hover:text-primary-600 md:hover:scale-105 ${
               item.hidden ? "hidden" : ""
-            } ${item.bgClass}`}
+            } ${item.bgClass} ${
+              pathname === item.href ? "text-primary-600 underline" : ""
+            }`}
           >
             {item.text}
           </Link>

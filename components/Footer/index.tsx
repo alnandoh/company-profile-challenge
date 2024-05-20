@@ -35,11 +35,22 @@ const socialMediaLinks = [
 const footerLinks = [
   {
     title: "Home",
-    links: ["Why Us", "About Us", "Testimonials", "FAQ"],
+    links: [
+      { label: "Why Us", href: "#whyUs" },
+      { label: "Our Works", href: "#worksSection" },
+      { label: "Testimonials", href: "#testimonials" },
+      { label: "FAQ", href: "#faq" },
+    ],
   },
   {
     title: "Pages",
-    links: ["Home", "Services", "About Us", "Teams"],
+    links: [
+      { label: "Home", href: "/" },
+      { label: "Services", href: "/services" },
+      { label: "About Us", href: "/about" },
+      { label: "Teams", href: "/teams" },
+      { label: "Careers", href: "/careers" },
+    ],
   },
   // {
   //   title: "Projects",
@@ -103,10 +114,10 @@ export default function Footer() {
                   {section.links.map((link, idx) => (
                     <Link
                       key={idx}
-                      href="/"
+                      href={link.href}
                       className="text-shade-600 text-sm transition duration-200 ease-in-out hover:underline hover:text-shade-300"
                     >
-                      {link}
+                      {link.label}
                     </Link>
                   ))}
                 </div>

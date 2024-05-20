@@ -43,7 +43,7 @@ const testimonials = [
 
 export default function TestimonialsSection() {
   return (
-    <section className="space-y-2.5">
+    <section className="space-y-2.5" id="testimonials">
       <Card>
         <h2>Testimonials</h2>
       </Card>

@@ -32,6 +32,7 @@ export default function RootLayout({
           as="image"
           href="https://res.cloudinary.com/dswhfzczf/video/upload/v1716176914/meeting-conference1.webm"
         />
+        <link rel="icon" href="/favicon.ico" />
       </head>
       <body className={roboto_flex.className}>
         <ProgressBar />

@@ -12,7 +12,7 @@ export default function TestimonialGiver({
   image,
 }: TestimonialGiverProps) {
   return (
-    <div className="bg-dark-600 -mx-6 -mb-6 px-6 py-4 lg:-mx-10 lg:-mb-10 lg:px-10 lg:py-4 rounded-b-xl flex justify-between mt-auto">
+    <div className="bg-dark-600 -mx-6 -mb-6 px-6 py-4 md:-mx-8 md:-mb-8 md:px-8 lg:-mx-10 lg:-mb-10 lg:px-10 rounded-b-xl flex justify-between mt-auto">
       <div className="flex gap-4 items-center">
         <div className="rounded-full h-10 w-10 bg-primary-700">
           <Image src={image} alt={`${image} Icon`} className="mx-auto" />

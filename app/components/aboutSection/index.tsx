@@ -39,7 +39,7 @@ const contentData = [historyContent, cultureContent];
 export default function AboutSection() {
   return (
     <>
-      <section className="space-y-2.5">
+      <section className="space-y-2.5" id="whyUs">
         <Card>
           <h2>Reasons to Choose NexGen for Your Digital Journey</h2>
         </Card>

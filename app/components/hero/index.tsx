@@ -6,7 +6,7 @@ import VideoPlayer from "@/components/VideoPlayer";
 const videoUrl =
   "https://res.cloudinary.com/dswhfzczf/video/upload/v1716176914/meeting-conference.webm";
 const videoPoster =
-  "https://res.cloudinary.com/dswhfzczf/image/upload/v1716173044/meeting-conference.webp";
+  "https://res.cloudinary.com/dswhfzczf/image/upload/v1716173044/meeting-conference";
 
 export default function Hero() {
   return (
