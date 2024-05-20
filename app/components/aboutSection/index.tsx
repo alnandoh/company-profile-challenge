@@ -74,7 +74,6 @@ export default function AboutSection() {
             </Card>
           ))}
         </div>
-        <Button text="Check our company" href="about" />
       </section>
     </>
   );

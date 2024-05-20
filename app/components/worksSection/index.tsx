@@ -2,7 +2,7 @@ import Image from "next/image";
 import Card from "@/components/Card";
 import CircleButton from "@/components/CircleButton";
 import IconHolder from "@/components/IconHolder";
-import Pill from "@/components/Pill";
+import Pills from "@/components/Pills";
 import Avatar from "@/components/Avatar";
 import Zenith from "@/public/Zenith.jpg";
 import ZenithIcon from "@/public/MagicStick.svg";
@@ -17,6 +17,7 @@ import Avatar6 from "@/public/Avatar6.png";
 import Avatar7 from "@/public/Avatar7.png";
 import Avatar8 from "@/public/Avatar8.png";
 import Avatar9 from "@/public/Avatar9.png";
+import Pill from "@/components/Pill";
 
 const works = [
   {
@@ -74,24 +75,8 @@ export default function WorksSection() {
                   text={work.title}
                 />
                 <div className="flex flex-col gap-2">
-                  <div className="flex items-center gap-1 w-max bg-dark-600 rounded-[45px] px-2.5 py-1.5">
-                    <p className="text-shade-600 text-xs xl:text-sm">
-                      Category
-                    </p>
-                    <div className="rounded-full w-1 h-1 bg-primary-800"></div>
-                    <p className="text-shade-400 text-xs xl:text-sm">
-                      {work.category}
-                    </p>
-                  </div>
-                  <div className="flex items-center gap-1 w-max bg-dark-600 rounded-[45px] px-2.5 py-1.5">
-                    <p className="text-shade-600 text-xs xl:text-sm">
-                      Time Taken
-                    </p>
-                    <div className="rounded-full w-1 h-1 bg-primary-800"></div>
-                    <p className="text-shade-400 text-xs xl:text-sm">
-                      {work.timeTaken}
-                    </p>
-                  </div>
+                  <Pill title="Category" content={work.category} />
+                  <Pill title="Time Taken" content={work.timeTaken} />
                 </div>
 
                 <p className="text-sm xl:text-base text-shade-400 lg:mt-1.5">
@@ -105,7 +90,7 @@ export default function WorksSection() {
               <Card className="md:flex-grow">
                 <p className="text-base font-medium">TECHNOLOGIES USED</p>
                 <div className="flex flex-wrap gap-2.5">
-                  <Pill contents={work.technologies} />
+                  <Pills contents={work.technologies} />
                 </div>
               </Card>
               <Card className="md:flex-grow">

@@ -25,6 +25,22 @@
   }
 }
 
+.custom-pulse{
+  animation:custom-pulse 2s infinite;
+}
+
+@keyframes custom-pulse {
+  0% {
+    opacity: 0.75;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.75;
+  }
+}
+
 
 .loader {
   width: 160px;

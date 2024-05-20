@@ -84,7 +84,7 @@ export default function ServicesSection({ details }: ServicesSectionProps) {
               <div>
                 <p className="font-medium text-lg leading-[150%] mb-1">
                   Starts From{" "}
-                  <span className="text-xl text-primary-600 animate-pulse">
+                  <span className="text-xl text-primary-700 custom-pulse">
                     {service.startingPrice}
                   </span>
                 </p>
