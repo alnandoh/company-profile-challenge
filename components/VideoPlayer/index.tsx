@@ -14,9 +14,10 @@ export default function VideoPlayer({
       src={videoSrc}
       poster={videoPoster}
       className="absolute inset-0 w-full h-full opacity-20 object-cover object-right pointer-events-none"
-      autoPlay={true}
-      muted={true}
-      loop={true}
+      autoPlay
+      playsInline
+      muted
+      loop
     />
   );
 }

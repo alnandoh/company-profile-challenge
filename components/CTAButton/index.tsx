@@ -10,7 +10,7 @@ export default function CTAButton() {
       target="_blank"
       rel="noreferrer noopener"
     >
-      <Image src={Whatsapp} alt="Whatsapp Icon" width={32} height={32} />
+      <Image src={Whatsapp} alt="Whatsapp Icon" width={56} height={56} />
     </Link>
   );
 }
