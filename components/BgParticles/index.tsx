@@ -14,7 +14,7 @@ export default function BgParticles() {
 
   return (
     <Particles
-      className="w-full h-full fixed -z-[1] hidden md:block"
+      className="w-screen h-screen absolute top-0 left-0 -z-[1] hidden md:block"
       id="tsparticles"
       init={particlesInit}
       loaded={particlesLoaded}
