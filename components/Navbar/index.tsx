@@ -30,7 +30,8 @@ export default function Navbar() {
   console.log(pathname);
   return (
     <div
-      className={`bg-dark-700 mt-6 px-4 py-3 rounded-lg md:flex md:justify-between md:items-center`}
+      className={`bg-dark-700 mt-6 px-4 py-3 rounded-lg md:flex md:justify-between md:items-center md:bg-shade-700/10
+      md:backdrop-blur-[10px]`}
     >
       <div className="flex items-center justify-between">
         <Link href="/" className="md:pl-8 lg:pl-8">
@@ -58,7 +59,7 @@ export default function Navbar() {
           <Link
             key={index}
             href={item.href}
-            className={`md:font-medium leading-[150%] px-2.5 py-1.5 lg:px-5 lg:py-3.5 md:bg-dark-800 rounded-xl text-base transition duration-200 ease-in-out md:hover:underline md:hover:text-primary-600 md:hover:scale-105 ${
+            className={`md:font-medium leading-[150%] px-2.5 py-1.5 lg:px-5 lg:py-3.5 md:bg-dark-800/35 rounded-xl text-base transition duration-200 ease-in-out md:hover:underline md:hover:text-primary-600 md:hover:scale-105 ${
               item.hidden ? "hidden" : ""
             } ${item.bgClass} ${
               pathname === item.href ? "text-primary-600 underline" : ""

@@ -125,12 +125,10 @@ export default function Footer() {
             </div>
           </Card>
         </div>
-        <Card className="md:flex-row md:justify-between md:gap-8">
-          <div className="flex flex-col gap-2">
-            <p className="font-medium text-xl md:text-lg text-primary-300">
-              SUBSCRIBE TO OUR NEWSLETTER
-            </p>
-          </div>
+        <Card className="md:flex-row md:justify-between items-center md:gap-8">
+          <p className="font-medium text-xl md:text-lg text-primary-300">
+            SUBSCRIBE TO OUR NEWSLETTER
+          </p>
           <div className="flex justify-between items-center gap-3 md:place-self-end md:flex-grow">
             <input
               type="email"
@@ -138,7 +136,7 @@ export default function Footer() {
               name="email"
               autoComplete="on"
               placeholder="Enter your email"
-              className="w-full bg-dark-700 border-b border-dark-400 py-2 px-4 text-sm focus:outline-none md:text-base focus:border-primary-300 flex-grow"
+              className="w-full bg-dark-800 border-b border-dark-400 py-2 px-4 text-sm focus:outline-none md:text-base focus:border-primary-300 flex-grow md:max-w-[300px] md:ml-auto rounded-lg"
             />
             <CircleButton />
           </div>

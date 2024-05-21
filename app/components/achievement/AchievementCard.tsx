@@ -19,9 +19,8 @@ export default function AchievementCard({
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, type: "spring", stiffness: 100 }}
       whileHover={{ scale: 1.015 }}
-      className={`relative w-full py-4 bg-dark-700 rounded-lg md:rounded-xl flex flex-col items-center text-center gap-[10px] ${classname}`}
+      className={`relative w-full py-4 bg-dark-700 md:bg-shade-700/10 rounded-lg md:rounded-xl flex flex-col items-center text-center gap-[10px] md:backdrop-blur-[10px] md:border md:border-primary-500/20 ${classname}`}
     >
-      <div className="absolute inset-0 rounded-lg md:rounded-xl shadow-sm shadow-primary-600/30 "></div>
       <div className="font-medium text-shade-600 uppercase leading-[150%] lg:text-sm lg:mb-4">
         {title}
       </div>

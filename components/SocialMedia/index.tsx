@@ -13,7 +13,7 @@ export default function SocialMedia({ imageUrl, name, url }: SocialMediaProps) {
       href={url}
       target="blank"
       rel="noopener noreferrer"
-      className="flex lg:flex-col lg:gap-2.5 items-center justify-center bg-dark-600 w-full lg:h-full h-12 rounded-[10px] border border-dark-400 group/socialmedia duration-200 ease-in-out"
+      className="flex lg:flex-col lg:gap-2.5 items-center justify-center bg-dark-600 w-full lg:h-full h-12 rounded-[10px] border border-dark-400 group/socialmedia duration-200 ease-in-out md:bg-shade-700/10 md:backdrop-blur-[10px]"
       passHref
     >
       <Image
